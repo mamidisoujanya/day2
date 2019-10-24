@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int a[100],i,position;
+
+printf("enter the array of elements");
+
+for(i=0;i<4;i++)
+scanf("%d",&a[i]);
+
+printf("Enter the location to delete an element\n");
+   scanf("%d", &position);
+ for(i=position;i<=3;i++)
+a[i]=a[i+1];
+for(i=0;i<3;i++)
+printf("%d\n",a[i]);
+
+return 0;
+
+}
