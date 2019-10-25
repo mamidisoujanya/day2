@@ -12,7 +12,7 @@ for(l=0;str[l]!='\0';l++);
 for(l1=0;str1[l1]!='\0';l1++);
 if(l==l1)
 {
-l=l1;
+
 for(i=0;i<l;i++)
 {
 same=0;
@@ -30,6 +30,6 @@ else
 printf("\ngiven strings is  a anagram");
 }
 else
-printf("strings lengths are not equal ");
+printf("two strings not in equal length.strings is not angram");
 return 0;
 }
