@@ -3,29 +3,36 @@
 int main()
 {
 char str[100],str2[100],temp[100];
-int i,j;
-
+int i=0,j=0,k,l;
 printf("enter the string one\n");
 scanf("%[^\n]%*c",str);
-
 printf("enter the string two\n");
 scanf("%[^\n]%*C",str2);
 
-for(i=0,j=0;str[i]!='\0';i++,j++)
-  {
-  temp[j]=str[i];
-  }
-for(j=0,i=0;str2[j]!='\0';j++,i++)
- {
- str[i]=str2[j];
- }
-
-
-for(j=0,i=0;temp[j]!='\0';j++,i++)
- {
- str2[i]=temp[j];
- }
- printf("str is %s\n",str);
- printf("str2 is %s",str2);
+while(str[i]!='\0')
+{
+temp[j]=str[i];
+i++;
+j++;
+}
+temp[j]='\0';
+i=0,j=0;
+while(str2[i]!='\0')
+{
+str[j]=str2[i];
+i++;
+j++;
+}
+str[j]='\0';
+i=0,j=0;
+while(temp[i]!='\0')
+{
+str2[j]=temp[i];
+i++;
+j++;
+}
+str2[j]='\0';
+printf("str1 is %s\n",str);
+printf("str2 is %s",str2);
 return 0;
 }
